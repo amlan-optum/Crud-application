@@ -1,14 +1,12 @@
 package com.example.crud.service;
 
-
-
-
+import com.example.crud.dto.UserDto;
 import com.example.crud.entity.Department;
 import com.example.crud.entity.Employee;
-import com.example.crud.entity.Login;
+import com.example.crud.entity.Role;
+import com.example.crud.entity.User;
 
 import java.util.List;
-import java.util.Map;
 
 public interface UserService {
     List<Employee> getAllEmployees();
@@ -18,7 +16,14 @@ public interface UserService {
     Employee updateEmployee(Employee employee);
     void deleteEmployeeById(Long id);
 
-    List<Login> getAllCredentials();
+
+    void saveUser(UserDto userDto);
+
+    User findUserByEmail(String email);
+
+    List<UserDto> findAllUsers();
+
+
 
 
 
