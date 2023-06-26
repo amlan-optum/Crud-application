@@ -17,10 +17,13 @@ public interface UserService {
     void deleteEmployeeById(Long id);
 
 
+    // save new user to database
     void saveUser(UserDto userDto);
 
+    //for login check
     User findUserByEmail(String email);
 
+    //to show all registered users
     List<UserDto> findAllUsers();
 
 

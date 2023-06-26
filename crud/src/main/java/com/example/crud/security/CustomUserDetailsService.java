@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
+//to check login credentials of an user
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 

@@ -11,6 +11,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+
+// to transfer data from the controller to the view layer and also bind the form data
 public class UserDto
 {
     private Long id;

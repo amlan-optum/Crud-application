@@ -31,7 +31,7 @@ public class SpringSecurity {
                         authorize.requestMatchers("/register/**").permitAll()
                                 .requestMatchers("/index").permitAll()
                                 .requestMatchers("/employees").permitAll()
-                                .requestMatchers("/users").hasAnyRole("ADMIN","USER")
+                                .requestMatchers("/users").hasAnyRole("ADMIN")
                                 .requestMatchers("/employees/new").hasRole("ADMIN")
                                 .requestMatchers("/employees/view/{id}").hasRole("ADMIN")
                                 .requestMatchers("/employees/edit/{id}").hasRole("ADMIN")
@@ -46,7 +46,7 @@ public class SpringSecurity {
                         form -> form
                                 .loginPage("/login")
                                 .loginProcessingUrl("/login")
-                                .defaultSuccessUrl("/users")
+                                .defaultSuccessUrl("/employees")
                                 .permitAll()
                 ).logout(
                         logout -> logout
